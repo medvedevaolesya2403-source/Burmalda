@@ -1,0 +1,284 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;          /* включает flex-контейнер */
+    justify-content: space-between;  /* раздвигает логотип и меню по краям */
+    align-items: center;    /* выравнивает по вертикали по центру */
+    background-color: #a3b9cf;
+    color: rgb(76, 61, 61);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;          /* пункты меню в строку */
+    gap: 20px;              /* расстояние между пунктами */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(52, 41, 41);
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Dancing Script", cursive;
+    background-color: aliceblue;   /* цвет фона (можно изменить) */
+    font-weight: 300;              /* толщина шрифта */
+    font-size: 18px;               /* размер шрифта */
+    line-height: 25px;             /* высота строки */
+    color: black;                  /* цвет текста */
+    margin: 0;                     /* убираем внешние отступы */
+    padding: 0;                    /* убираем внутренние отступы */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-photo {
+    flex: 1;
+    text-align: center;
+}
+
+.about-photo img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-photo {
+    flex: 1;
+    text-align: center;
+}
+
+.about-photo img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;    /* делаем фото круглым */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+    
+
+
+/* 3. Убираем маркеры у списков */
+ul, ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* 4. Убираем подчёркивание у ссылок */
+a {
+    text-decoration: none;
+    color: inherit;               /* наследуем цвет от родителя */
+}
+.alt-bg {
+    background-color: #e9f0f5;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.experience-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.experience-item h3 {
+    margin: 0 0 5px;
+    color: #2c3e50;
+}
+
+.date {
+    font-size: 14px;
+    color: #7f8c8d;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.education-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.edu-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.edu-card:hover {
+    transform: translateY(-5px);
+}
+
+.year {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #e67e22;
+}
+.contacts-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contacts-info {
+    flex: 1;
+}
+
+.contacts-info p {
+    margin: 15px 0;
+}
+
+.map {
+    flex: 1;
+}
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+/* Прелоадер – затемняет и центрирует содержимое */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+/* Спиннер, если нет гифки */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top-color: #2c3e50;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Класс, который скрывает прелоадер (будет добавлен JS) */
+#preloader.hide-preloader {
+    display: none;
+}
+/* Модальное окно (изначально скрыто) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- СТИЛИ ВСПЛЫВАЮЩЕЙ ФОРМЫ --- */
+#popupForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачное затемнение фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;}
+
+#popupForm.hide-popup {display: none; /* Форма скрыта по умолчанию */}
+
+.form-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;}
+
+.form-content p {margin-bottom: 10px;}

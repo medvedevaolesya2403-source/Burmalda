@@ -1,0 +1,30 @@
+window.onload = function(){
+    let preloader = document.getElementById('preloader');
+    preloader.classList.add('hide-preloader');
+}
+function openModal() {
+    document.getElementById('modalOverlay').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('modalOverlay').style.display = 'none';
+}
+
+// Закрытие при клике на фон (на само затемнение)
+document.getElementById('modalOverlay').onclick = function(event) {
+    if (event.target === this) {
+        this.style.display = 'none';
+    }
+}
+document.getElementById('feedbackForm').onsubmit = function(e) {
+    e.preventDefault();
+    alert('Форма отправлена! (демонстрация)');
+    console.log('Имя: ' + this.name.value);
+    console.log('Email: ' + this.email.value);
+    console.log('Телефон: ' + this.phone.value);
+    console.log('Тема: ' + this.topic.value);
+    console.log('Сообщение: ' + this.message.value);
+    console.log('Согласие: ' + this.agreement.checked);
+    closeModal();
+    this.reset();
+}
